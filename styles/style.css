@@ -21,6 +21,15 @@ body {
   font-family: "\6E38\30B4\30B7\30C3\30AF   Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
 }
 
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
 main {
   display: block;
 }
@@ -88,10 +97,10 @@ button {
   cursor: pointer;
 }
 
-#canvas {
+canvas {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .panelWrap {
@@ -104,7 +113,7 @@ button {
   left: 0;
   height: 60px;
   background: rgba(255, 255, 255, 0.7);
-  z-index: -1;
+  z-index: 10;
 }
 
 .panel {
@@ -138,6 +147,14 @@ button {
 
 .panel .btn.bottom {
   transform: rotate(90deg);
+}
+
+.panel .btn.rotate {
+  transition: color 0.2s;
+}
+
+.panel .btn.rotate.is-enable {
+  color: green;
 }
 
 .panolens-infospot {
