@@ -127,14 +127,11 @@ canvas {
   height: 60px;
   text-align: center;
   cursor: pointer;
+  transition: color 0.2s;
 }
 
 .panel .btn .material-icons {
   font-size: 46px;
-}
-
-.panel .btn.left {
-  transform: rotate(180deg);
 }
 
 .panel .btn.top {
@@ -146,11 +143,12 @@ canvas {
 }
 
 .panel .btn.rotate {
-  transition: color 0.2s;
+  margin-right: 44px;
+  transform: scale(1, -1);
 }
 
-.panel .btn.rotate.is-enable {
-  color: green;
+.panel .btn.is-enable {
+  color: lightseagreen;
 }
 
 .panolens-infospot {
